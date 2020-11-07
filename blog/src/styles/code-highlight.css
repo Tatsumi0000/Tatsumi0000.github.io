@@ -1,0 +1,42 @@
+.gatsby-highlight-code-line {
+  background: #545454;
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #f99;
+}
+
+.gatsby-highlight {
+  background-color: #3c3c3c;
+  border-radius: 0 0.3em 0.3em 0.3em;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+}
+
+.gatsby-highlight pre[class*="language-"] {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  overflow: initial;
+  float: left; /* 1 */
+  min-width: 100%; /* 2 */
+}
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding-left: 2.8em; /* 3 */
+}
+
+.gatsby-code-title {
+  background: #2e96b5;
+  color: #eee;
+  margin-bottom: -0.65em;
+  padding: 6px 12px;
+  font-size: 0.8em;
+  line-height: 1;
+  font-family: SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+  font-weight: bold;
+  border-radius: 4px 4px 0 0;
+  display: table;
+}

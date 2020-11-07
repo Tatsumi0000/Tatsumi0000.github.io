@@ -1,6 +1,7 @@
 ---
 title: Hello World
 date: "2015-05-01T22:12:03.284Z"
+modified_date: "2020-11-08"
 description: "Hello World"
 ---
 
@@ -23,8 +24,20 @@ Oh, and here's a great quote from this Wikipedia on
 
 You can also write code blocks here!
 
-```js
+```javascript:title=gatsby-config.js
 const saltyDuckEgg = "chinese preserved food product"
+const saltyDuckEgg = "chinese preserved food product"
+const saltyDuckEgg = "chinese preserved food product"
+const saltyDuckEgg = "chinese preserved food product"
+
+const saltyDuckEgg = "chinese preserved food product"
+```
+
+```swift{1}:title=sample.swift
+protocol Sample {
+    func fetch(value: String) -> String
+    func add(a: Int, b:Int) -> Int
+}
 ```
 
 | Number | Title                                    | Year |
