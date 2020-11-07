@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+
+  clean-install:
+    build:
+      context: "./"
+      dockerfile: "gatsby.Dockerfile"
+    container_name: "clean-install"
+    volumes:
+      - "./blog/:/app/blog"
+    working_dir: "/app/"
+    tty: true
+    command: >
+      bash -c "gatsby new blog https://github.com/gatsbyjs/gatsby-starter-blog && 
+      cd blog &&
+      npm install typescript gatsby-plugin-typescript"
+
+  gatsby-develop:
+    build:
+      context: "./"
+      dockerfile: "gatsby.Dockerfile"
+    container_name: gatsby-develop
+    ports:
+      - 8000:8000
+    tty: true
+    volumes:
+      - ./blog/:/app/blog
+    working_dir: /app/blog
+    environment:
+      - NODE_ENV="development"
+    restart: always
+    command: gatsby develop --host 0.0.0.0
