@@ -1,9 +1,11 @@
+const { resolve } = require("path");
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `私的歌詞倉庫`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Tatsumi0000`,
+      summary: `モバイル開発が好きなエンジニアのブログです．`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
@@ -44,6 +46,17 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-code-titles`,
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -56,7 +69,6 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],

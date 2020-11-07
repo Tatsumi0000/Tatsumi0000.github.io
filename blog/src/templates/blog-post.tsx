@@ -9,6 +9,8 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
+  const date = post.frontmatter.date;
+  const modifiedDate = post.frontmatter.modified_date;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -23,7 +25,7 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.date}</p>
+          {date !== modifiedDate ? <p>{date} 作成 {modifiedDate} 更新</p> : <p>{date} 作成</p>}
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -83,7 +85,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY-MM-DD")
+        modified_date(formatString: "YYYY-MM-DD")
         description
       }
     }

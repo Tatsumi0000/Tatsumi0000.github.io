@@ -715,6 +715,7 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___title'
   | 'childMarkdownRemark___frontmatter___description'
   | 'childMarkdownRemark___frontmatter___date'
+  | 'childMarkdownRemark___frontmatter___modified_date'
   | 'childMarkdownRemark___fields___slug'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
@@ -841,6 +842,7 @@ export type Frontmatter = {
   title?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
   date?: Maybe<Scalars['Date']>;
+  modified_date?: Maybe<Scalars['Date']>;
 };
 
 
@@ -851,10 +853,19 @@ export type FrontmatterDateArgs = {
   locale?: Maybe<Scalars['String']>;
 };
 
+
+export type FrontmatterModified_DateArgs = {
+  formatString?: Maybe<Scalars['String']>;
+  fromNow?: Maybe<Scalars['Boolean']>;
+  difference?: Maybe<Scalars['String']>;
+  locale?: Maybe<Scalars['String']>;
+};
+
 export type FrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
   date?: Maybe<DateQueryOperatorInput>;
+  modified_date?: Maybe<DateQueryOperatorInput>;
 };
 
 export type ImageCropFocus = 
@@ -1556,6 +1567,7 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___title'
   | 'frontmatter___description'
   | 'frontmatter___date'
+  | 'frontmatter___modified_date'
   | 'fields___slug'
   | 'excerpt'
   | 'rawMarkdownBody'
@@ -2543,6 +2555,9 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___allExtensions'
   | 'pluginCreator___pluginOptions___path'
   | 'pluginCreator___pluginOptions___name'
+  | 'pluginCreator___pluginOptions___classPrefix'
+  | 'pluginCreator___pluginOptions___showLineNumbers'
+  | 'pluginCreator___pluginOptions___noInlineHighlight'
   | 'pluginCreator___pluginOptions___maxWidth'
   | 'pluginCreator___pluginOptions___linkImagesToOriginal'
   | 'pluginCreator___pluginOptions___showCaptions'
@@ -2768,6 +2783,9 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___plugins___id'
   | 'pluginOptions___plugins___name'
   | 'pluginOptions___plugins___version'
+  | 'pluginOptions___plugins___pluginOptions___classPrefix'
+  | 'pluginOptions___plugins___pluginOptions___showLineNumbers'
+  | 'pluginOptions___plugins___pluginOptions___noInlineHighlight'
   | 'pluginOptions___plugins___pluginOptions___maxWidth'
   | 'pluginOptions___plugins___pluginOptions___linkImagesToOriginal'
   | 'pluginOptions___plugins___pluginOptions___showCaptions'
@@ -2790,6 +2808,9 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___allExtensions'
   | 'pluginOptions___path'
   | 'pluginOptions___name'
+  | 'pluginOptions___classPrefix'
+  | 'pluginOptions___showLineNumbers'
+  | 'pluginOptions___noInlineHighlight'
   | 'pluginOptions___maxWidth'
   | 'pluginOptions___linkImagesToOriginal'
   | 'pluginOptions___showCaptions'
@@ -2945,6 +2966,9 @@ export type SitePluginPluginOptions = {
   allExtensions?: Maybe<Scalars['Boolean']>;
   path?: Maybe<Scalars['String']>;
   name?: Maybe<Scalars['String']>;
+  classPrefix?: Maybe<Scalars['String']>;
+  showLineNumbers?: Maybe<Scalars['Boolean']>;
+  noInlineHighlight?: Maybe<Scalars['Boolean']>;
   maxWidth?: Maybe<Scalars['Int']>;
   linkImagesToOriginal?: Maybe<Scalars['Boolean']>;
   showCaptions?: Maybe<Scalars['Boolean']>;
@@ -2988,6 +3012,9 @@ export type SitePluginPluginOptionsFilterInput = {
   allExtensions?: Maybe<BooleanQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
   name?: Maybe<StringQueryOperatorInput>;
+  classPrefix?: Maybe<StringQueryOperatorInput>;
+  showLineNumbers?: Maybe<BooleanQueryOperatorInput>;
+  noInlineHighlight?: Maybe<BooleanQueryOperatorInput>;
   maxWidth?: Maybe<IntQueryOperatorInput>;
   linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>;
   showCaptions?: Maybe<BooleanQueryOperatorInput>;
@@ -3050,6 +3077,9 @@ export type SitePluginPluginOptionsPluginsFilterListInput = {
 };
 
 export type SitePluginPluginOptionsPluginsPluginOptions = {
+  classPrefix?: Maybe<Scalars['String']>;
+  showLineNumbers?: Maybe<Scalars['Boolean']>;
+  noInlineHighlight?: Maybe<Scalars['Boolean']>;
   maxWidth?: Maybe<Scalars['Int']>;
   linkImagesToOriginal?: Maybe<Scalars['Boolean']>;
   showCaptions?: Maybe<Scalars['Boolean']>;
@@ -3066,6 +3096,9 @@ export type SitePluginPluginOptionsPluginsPluginOptions = {
 };
 
 export type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
+  classPrefix?: Maybe<StringQueryOperatorInput>;
+  showLineNumbers?: Maybe<BooleanQueryOperatorInput>;
+  noInlineHighlight?: Maybe<BooleanQueryOperatorInput>;
   maxWidth?: Maybe<IntQueryOperatorInput>;
   linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>;
   showCaptions?: Maybe<BooleanQueryOperatorInput>;
@@ -3168,7 +3201,7 @@ export type BlogPostBySlugQueryVariables = Exact<{
 
 export type BlogPostBySlugQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }>, markdownRemark?: Maybe<(
     Pick<MarkdownRemark, 'id' | 'excerpt' | 'html'>
-    & { frontmatter?: Maybe<Pick<Frontmatter, 'title' | 'date' | 'description'>> }
+    & { frontmatter?: Maybe<Pick<Frontmatter, 'title' | 'date' | 'modified_date' | 'description'>> }
   )>, previous?: Maybe<{ fields?: Maybe<Pick<Fields, 'slug'>>, frontmatter?: Maybe<Pick<Frontmatter, 'title'>> }>, next?: Maybe<{ fields?: Maybe<Pick<Fields, 'slug'>>, frontmatter?: Maybe<Pick<Frontmatter, 'title'>> }> };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
