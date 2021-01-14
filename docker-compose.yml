@@ -30,4 +30,5 @@ services:
     environment:
       - NODE_ENV="development"
     restart: always
-    command: gatsby develop --host 0.0.0.0
+    command: >
+      bash -c "gatsby develop --host 0.0.0.0"
