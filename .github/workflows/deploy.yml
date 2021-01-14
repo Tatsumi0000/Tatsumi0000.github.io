@@ -34,6 +34,7 @@ jobs:
       run: |
         cd blog
         npm run build
+        echo "soleil-luminas.com" > ./public/CNAME
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
