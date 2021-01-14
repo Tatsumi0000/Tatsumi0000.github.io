@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
     
     steps:
@@ -26,8 +26,10 @@ jobs:
           ${{ runner.os }}-node-
 
     - name: Install
-      run: npm install
-      
+      run: |
+        cd blog
+        npm install
+
     - name: build
       run: npm run build
 
