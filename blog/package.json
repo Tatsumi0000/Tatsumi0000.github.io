@@ -31,8 +31,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
     "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75",
-    "typescript": "^4.0.5"
+    "typeface-montserrat": "0.0.75"
   },
   "devDependencies": {
     "gatsby-remark-code-titles": "^1.1.0",

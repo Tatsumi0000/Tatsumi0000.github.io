@@ -25,7 +25,7 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          {date !== modifiedDate ? <p>{date} 作成 {modifiedDate} 更新</p> : <p>{date} 作成</p>}
+          {modifiedDate == null ? <p>{date} 作成</p> : <p>{date} 作成 {modifiedDate} 更新</p>}
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
