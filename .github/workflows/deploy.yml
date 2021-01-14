@@ -30,8 +30,10 @@ jobs:
         cd blog
         npm install
 
-    - name: build
-      run: npm run build
+    - name: Build
+      run: |
+        cd blog
+        npm run build
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
