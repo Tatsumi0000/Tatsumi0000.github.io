@@ -1,6 +1,5 @@
-module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-}
+const tailwind = require('tailwindcss')
+
+module.exports = () => ({
+  plugins: [tailwind('./tailwind.config.js')],
+})
