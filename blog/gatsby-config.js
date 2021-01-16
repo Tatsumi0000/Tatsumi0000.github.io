@@ -117,7 +117,7 @@ module.exports = {
         develop: false,        // 開発環境でbuildした時もCSSを削除
         tailwind: true,       // TailwindCSS使用時はTrue default: false
         whitelist: ['selector'], // 削除しないCSSを指定 default: []
-        ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/', './src/styles/*.css'], // 削除しないファイルを指定 default: []
+        ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/', 'normalize.css', 'code-hilight.css', 'style.css'], // 削除しないファイルを指定 default: []
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // 指定したファイルのCSSのみを削除 default: []
       }
     },
