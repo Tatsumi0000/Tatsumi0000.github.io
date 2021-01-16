@@ -122,6 +122,7 @@ module.exports = {
         printRejected: true,
         develop: false,
         tailwind: true,
+        ignore: ['styles/*.css'],
       },
     },
   ],
