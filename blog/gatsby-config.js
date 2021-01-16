@@ -113,10 +113,15 @@ module.exports = {
       // https://qiita.com/AumyF/items/a6a8400cf9f5f2ce488f#purgecss%E3%81%A7%EF%BE%8A%EF%BE%9E%EF%BE%81%EF%BD%AD%EF%BD%AF%E3%81%A8
       resolve: "gatsby-plugin-purgecss",
       options: {
+        content: [
+          require("path").join(
+            process.cwd(),
+            "src/**/!(*.d).{js,jsx,ts,tsx,md,mdx}"
+          ),
+        ],
         printRejected: true,
         develop: false,
         tailwind: true,
-        whitelist: ['li'],
         ignore: ['normalize.css', 'style.css', 'code-highlight.css', 'prism-okaidia.css', 'prism-line-numbers.css', 'index.css'],
       },
     },

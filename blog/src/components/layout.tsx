@@ -1,7 +1,6 @@
 import React from "react"
 import Bio from "../components/bio"
 import Header from "../components/header"
-import "../utils/tailwind.css"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
