@@ -40,7 +40,7 @@ const BlogPostTemplate = ({ data, location }) => {
             display: `flex`,
             flexWrap: `wrap`,
             justifyContent: `space-between`,
-            // listStyle: `none`,
+            listStyle: `none`,
             padding: 0,
           }}
         >
