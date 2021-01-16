@@ -1,4 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[私的歌詞倉庫]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsby-starter-blog-demo.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 16 Jan 2021 07:12:57 GMT</lastBuildDate><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[私的歌詞倉庫]]></title><description><![CDATA[プログラミングや日常について書くブログです。]]></description><link>https://gatsby-starter-blog-demo.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 16 Jan 2021 08:10:01 GMT</lastBuildDate><item><title><![CDATA[ブログ始めました]]></title><description><![CDATA[ブログ始めました Gatsbyを使ってブログを作りました。といっても、starterkitそのままです。一応少しだけ改良しました。 TypeScript化 ソースコードのハイライトをキレイにした フッターの改良 外部サイトを開く時は新規タブで開く GitHubのmaster…]]></description><link>https://gatsby-starter-blog-demo.netlify.app/2021/01/16/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.app/2021/01/16/</guid><pubDate>Sat, 16 Jan 2021 16:58:00 GMT</pubDate><content:encoded>&lt;h2&gt;ブログ始めました&lt;/h2&gt;
+&lt;p&gt;Gatsbyを使ってブログを作りました。といっても、starterkitそのままです。一応少しだけ改良しました。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;TypeScript化&lt;/li&gt;
+&lt;li&gt;ソースコードのハイライトをキレイにした&lt;/li&gt;
+&lt;li&gt;フッターの改良&lt;/li&gt;
+&lt;li&gt;外部サイトを開く時は新規タブで開く&lt;/li&gt;
+&lt;li&gt;GitHubのmasterにpushされるとGitHub PagesにCD（GitHub Actions）&lt;/li&gt;
+&lt;li&gt;独自ドメインをあてた&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;これらをしました。今までNuxt.jsやWordPressで色々やろうと頑張ってきましたが全部挫折してきたので、今回は挫折しないためにも、最小限の改良にとどめて始めました。&lt;/p&gt;
+&lt;p&gt;他にも色々やりたいことがあり、記事のタグ付けとページネーション、ヘッダー、フォントをいい感じにしたいなとは思っています。&lt;/p&gt;
+&lt;p&gt;そちらに関しては後ほどいい感じにしていきたいと思います。
+まずは、ブログを始めることのほうが重要なので。&lt;/p&gt;</content:encoded></item><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in…]]></description><link>https://gatsby-starter-blog-demo.netlify.app/new-beginnings/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.app/new-beginnings/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
 right at the coast of the Semantics, a large language ocean. A small river named
@@ -20,13 +33,13 @@ made herself on the way.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;When she reached the first hills of the &lt;strong&gt;Italic Mountains&lt;/strong&gt;, she had a last
 view back on the skyline of her hometown &lt;em&gt;Bookmarksgrove&lt;/em&gt;, the headline of
-&lt;a href=&quot;http://google.com&quot;&gt;Alphabet Village&lt;/a&gt; and the subline of her own road, the Line
+&lt;a href=&quot;http://google.com&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Alphabet Village&lt;/a&gt; and the subline of her own road, the Line
 Lane. Pityful a rhetoric question ran over her cheek, then she continued her
 way. On her way she met a copy.&lt;/p&gt;
 &lt;h3&gt;Overlaid the jeepers uselessly much excluding&lt;/h3&gt;
 &lt;p&gt;But nothing the copy said could convince her and so it didn’t take long until a
 few insidious Copy Writers ambushed her, made her drunk with
-&lt;a href=&quot;http://google.com&quot;&gt;Longe and Parole&lt;/a&gt; and dragged her into their agency, where
+&lt;a href=&quot;http://google.com&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Longe and Parole&lt;/a&gt; and dragged her into their agency, where
 they abused her for their projects again and again. And if she hasn’t been
 rewritten, then they are still using her.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -96,11 +109,11 @@ chicken eggs, though the…]]></description><link>https://gatsby-starter-blog-de
 &lt;p&gt;Did you know that “despite its name, salted duck eggs can also be made from
 chicken eggs, though the taste and texture will be somewhat different, and the
 egg yolk will be less rich.”?
-(&lt;a href=&quot;https://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;Wikipedia Link&lt;/a&gt;)&lt;/p&gt;
+(&lt;a href=&quot;https://en.wikipedia.org/wiki/Salted_duck_egg&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Wikipedia Link&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;Yeah, I didn’t either.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting! I’m sure I’ll write a lot more interesting things in the future. Oh, and here’s a…]]></description><link>https://gatsby-starter-blog-demo.netlify.app/hello-world/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.app/hello-world/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
 &lt;p&gt;I’m sure I’ll write a lot more interesting things in the future.&lt;/p&gt;
 &lt;p&gt;Oh, and here’s a great quote from this Wikipedia on
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Salted_duck_egg&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;A salted duck egg is a Chinese preserved food product made by soaking duck
 eggs in brine, or packing each egg in damp, salted charcoal. In Asian
@@ -180,7 +193,7 @@ firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;a href=&quot;https://raw.github.com/adamschwartz/github-markdown-kitchen-sink/master/README.md&quot;&gt;View raw (TEST.md)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://raw.github.com/adamschwartz/github-markdown-kitchen-sink/master/README.md&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;View raw (TEST.md)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This is a paragraph.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;This is a paragraph.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1&gt;Header 1&lt;/h1&gt;
@@ -296,9 +309,9 @@ Header 2
 - - -
 
 ---------------------------------------&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;This is &lt;a href=&quot;http://example.com&quot; title=&quot;Example&quot;&gt;an example&lt;/a&gt; link.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://example.com&quot;&gt;This link&lt;/a&gt; has no title attr.&lt;/p&gt;
-&lt;p&gt;This is &lt;a href=&quot;http://example.com&quot; title=&quot;Optional Title&quot;&gt;an example&lt;/a&gt; reference-style link.&lt;/p&gt;
+&lt;p&gt;This is &lt;a href=&quot;http://example.com&quot; title=&quot;Example&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;an example&lt;/a&gt; link.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://example.com&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;This link&lt;/a&gt; has no title attr.&lt;/p&gt;
+&lt;p&gt;This is &lt;a href=&quot;http://example.com&quot; title=&quot;Optional Title&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;an example&lt;/a&gt; reference-style link.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;This is [an example](http://example.com &amp;quot;Example&amp;quot;) link.
 
 [This link](http://example.com) has no title attr.
