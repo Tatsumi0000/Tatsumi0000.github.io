@@ -1,5 +1,5 @@
 module.exports = {
-  purge: ["./src/**/*.js", "./src/**/*.jsx", "./src/**/*.ts", "./src/**/*.tsx"],
+  purge: false,
   fontFamily: false, // tailwindCSSのfontFamilyを無効
   darkMode: false, // or 'media' or 'class'
   theme: {

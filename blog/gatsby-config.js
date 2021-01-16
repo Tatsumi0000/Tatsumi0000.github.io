@@ -108,16 +108,17 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     `gatsby-plugin-postcss`,
-    // {
-    //   // 設定方法が不明なので脳死で使わせていただく
-    //   // https://qiita.com/AumyF/items/a6a8400cf9f5f2ce488f#purgecss%E3%81%A7%EF%BE%8A%EF%BE%9E%EF%BE%81%EF%BD%AD%EF%BD%AF%E3%81%A8
-    //   resolve: "gatsby-plugin-purgecss",
-    //   options: {
-    //     printRejected: true,
-    //     develop: false,
-    //     tailwind: false,
-    //     ignore: ['normalize.css', 'style.css', 'code-highlight.css', 'prism-okaidia.css', 'prism-line-numbers.css', 'index.css'],
-    //   },
-    // },
+    {
+      // 設定方法が不明なので脳死で使わせていただく
+      // https://qiita.com/AumyF/items/a6a8400cf9f5f2ce488f#purgecss%E3%81%A7%EF%BE%8A%EF%BE%9E%EF%BE%81%EF%BD%AD%EF%BD%AF%E3%81%A8
+      resolve: "gatsby-plugin-purgecss",
+      options: {
+        printRejected: true,
+        develop: false,
+        tailwind: false,
+        whitelist: ['li'],
+        ignore: ['normalize.css', 'style.css', 'code-highlight.css', 'prism-okaidia.css', 'prism-line-numbers.css', 'index.css'],
+      },
+    },
   ],
 }
