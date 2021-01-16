@@ -1,7 +1,7 @@
 // custom typefaces
 import "typeface-montserrat"
 import "typeface-merriweather"
-import "./src/utils/tailwind.css"
+// import "./src/utils/tailwind.css"
 // custom CSS styles
 import "./src/styles/style.css"
 // normalize CSS across browsers
