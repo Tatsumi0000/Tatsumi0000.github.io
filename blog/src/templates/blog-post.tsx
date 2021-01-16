@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import "./src/utils/tailwind.css"
+import "../utils/tailwind.css"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
