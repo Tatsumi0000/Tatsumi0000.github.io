@@ -107,19 +107,19 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    `gatsby-plugin-postcss`,
-    {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        rejected:true,        // 削除されたCSSの容量を表示 
-        printRejected: true,  // 削除したCSSを最大100個まで一覧表示
-        printAll: true,       // 削除したCSSを全て一覧表示 
-        develop: false,        // 開発環境でbuildした時もCSSを削除
-        tailwind: true,       // TailwindCSS使用時はTrue default: false
-        whitelist: ['selector'], // 削除しないCSSを指定 default: []
-        ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/', 'normalize.css', 'code-hilight.css', 'style.css'], // 削除しないファイルを指定 default: []
-        // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // 指定したファイルのCSSのみを削除 default: []
-      }
-    },
+    // `gatsby-plugin-postcss`,
+    // {
+    //   resolve: `gatsby-plugin-purgecss`,
+    //   options: {
+    //     rejected:true,        // 削除されたCSSの容量を表示 
+    //     printRejected: true,  // 削除したCSSを最大100個まで一覧表示
+    //     printAll: true,       // 削除したCSSを全て一覧表示 
+    //     develop: false,        // 開発環境でbuildした時もCSSを削除
+    //     tailwind: true,       // TailwindCSS使用時はTrue default: false
+    //     whitelist: ['selector'], // 削除しないCSSを指定 default: []
+    //     ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/', 'normalize.css', 'code-hilight.css', 'style.css'], // 削除しないファイルを指定 default: []
+    //     // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // 指定したファイルのCSSのみを削除 default: []
+    //   }
+    // },
   ],
 }
