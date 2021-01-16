@@ -35,7 +35,8 @@
     "react-helmet": "^5.2.1",
     "tailwindcss": "^2.0.2",
     "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75"
+    "typeface-montserrat": "0.0.75",
+    "github-markdown-css": "^4.0.0"
   },
   "devDependencies": {
     "gatsby-remark-code-titles": "^1.1.0",
