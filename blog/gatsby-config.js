@@ -107,19 +107,22 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    // `gatsby-plugin-postcss`,
-    // {
-    //   resolve: `gatsby-plugin-purgecss`,
-    //   options: {
-    //     rejected:true,        // 削除されたCSSの容量を表示 
-    //     printRejected: true,  // 削除したCSSを最大100個まで一覧表示
-    //     printAll: true,       // 削除したCSSを全て一覧表示 
-    //     develop: false,        // 開発環境でbuildした時もCSSを削除
-    //     tailwind: true,       // TailwindCSS使用時はTrue default: false
-    //     whitelist: ['selector'], // 削除しないCSSを指定 default: []
-    //     ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/', 'normalize.css', 'code-hilight.css', 'style.css'], // 削除しないファイルを指定 default: []
-    //     // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // 指定したファイルのCSSのみを削除 default: []
-    //   }
-    // },
+    `gatsby-plugin-postcss`,
+    {
+      // 設定方法が不明なので脳死で使わせていただく
+      // https://qiita.com/AumyF/items/a6a8400cf9f5f2ce488f#purgecss%E3%81%A7%EF%BE%8A%EF%BE%9E%EF%BE%81%EF%BD%AD%EF%BD%AF%E3%81%A8
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        content: [
+          require("path").join(
+            process.cwd(),
+            "src/**/!(*.d).{js,jsx,ts,tsx,md,mdx}"
+          ),
+        ],
+        printRejected: true,
+        develop: false,
+        tailwind: true,
+      },
+    },
   ],
 }
