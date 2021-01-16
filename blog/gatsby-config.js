@@ -87,7 +87,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        //trackingId: `G-WC9223ENN9`,
       },
     },
     `gatsby-plugin-feed`,
@@ -121,7 +121,7 @@ module.exports = {
         ],
         printRejected: true,
         develop: false, tailwind: true,
-        ignore: ['normalize.css', 'style.css', 'code-highlight.css', 'prism-okaidia.css', 'prism-line-numbers.css'],
+        ignore: ['normalize.css', 'style.css', 'code-highlight.css', 'prism-okaidia.css', 'prism-line-numbers.css', 'index.css'],
       },
     },
   ],
