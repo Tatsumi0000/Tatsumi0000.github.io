@@ -8,7 +8,7 @@ services:
       dockerfile: "gatsby.Dockerfile"
     container_name: "clean-install"
     volumes:
-      - "./blog/:/app/blog"
+      - "./blog/:/app/blog:cached"
     working_dir: "/app/"
     tty: true
     command: >
@@ -25,10 +25,11 @@ services:
       - 8000:8000
     tty: true
     volumes:
-      - ./blog/:/app/blog
-    working_dir: /app/blog
+      - "./blog/:/app/blog:cached"
+    working_dir: "/app/blog"
     environment:
       - NODE_ENV="development"
     restart: always
     command: >
-      bash -c "gatsby develop --host 0.0.0.0"
+      bash -c "npm install &&
+      gatsby develop --host 0.0.0.0"

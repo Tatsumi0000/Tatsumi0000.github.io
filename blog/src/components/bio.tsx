@@ -26,7 +26,7 @@ const Bio = () => {
             summary
           }
           social {
-            twitter
+            github
           }
         }
       }
@@ -54,7 +54,7 @@ const Bio = () => {
         <p>
           Written by <strong>{author.name}</strong> {author?.summary || null}
           {` `}
-          <a href={`https://github.com/tatsumi0000/`}>
+          <a href={`https://github.com/tatsumi0000/`} target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
         </p>

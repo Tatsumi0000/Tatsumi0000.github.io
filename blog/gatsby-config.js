@@ -7,10 +7,10 @@ module.exports = {
       name: `Tatsumi0000`,
       summary: `モバイル開発が好きなエンジニアのブログです．`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `プログラミングや日常について書くブログです。`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      github: `Tatsumi0000`
     },
   },
   plugins: [
@@ -46,6 +46,14 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            // 新規タブで開く
+            resolve: "gatsby-remark-external-links",
+            options: {
+              rel: "noopener noreferrer",
+            }
+          },
+          // コードにタイトルを付ける
           `gatsby-remark-code-titles`,
           {
             resolve: `gatsby-remark-prismjs`,
