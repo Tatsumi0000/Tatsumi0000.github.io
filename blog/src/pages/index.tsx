@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import '../styles/tailwind.css'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -27,7 +28,7 @@ const BlogIndex = ({ data, location }) => {
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
-
+          
           return (
             <li key={post.fields.slug}>
               <article
@@ -35,14 +36,21 @@ const BlogIndex = ({ data, location }) => {
                 itemScope
                 itemType="http://schema.org/Article"
               >
-                <header>
                   <h2>
                     <Link to={post.fields.slug} itemProp="url">
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
+                <small>{post.frontmatter.date}</small>
+                  {post.frontmatter.tags.map(tag => {
+                    return (
+                      <div className="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 rounded-full bg-white text-gray-700 border">
+                        {tag}
+                      </div>
+                    )
+                  })
+                }
+               
                 <section>
                   <p
                     dangerouslySetInnerHTML={{
@@ -79,6 +87,7 @@ export const pageQuery = graphql`
           date(formatString: "YYYY-MM-DD")
           title
           description
+          tags
         }
       }
     }

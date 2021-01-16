@@ -2,6 +2,7 @@
 title: ブログ始めました
 date: "2021-01-16T16:58:00.000Z"
 description: "ブログ始めました"
+tags: ["sample1", "sample2"]
 ---
 
 ## ブログ始めました
