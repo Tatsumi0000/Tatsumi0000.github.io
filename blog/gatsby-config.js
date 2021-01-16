@@ -111,13 +111,13 @@ module.exports = {
     {
       // 設定方法が不明なので脳死で使わせていただく
       // https://qiita.com/AumyF/items/a6a8400cf9f5f2ce488f#purgecss%E3%81%A7%EF%BE%8A%EF%BE%9E%EF%BE%81%EF%BD%AD%EF%BD%AF%E3%81%A8
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        printRejected: true,
-        develop: false,
-        tailwind: true,
-        ignore: ['normalize.css', 'style.css', 'code-highlight.css', 'prism-okaidia.css', 'prism-line-numbers.css'],
-      },
+      // resolve: `gatsby-plugin-purgecss`,
+      // options: {
+      //   printRejected: true,
+      //   develop: false,
+      //   tailwind: true,
+      //   ignore: ['normalize.css', 'style.css', 'code-highlight.css', 'prism-okaidia.css', 'prism-line-numbers.css'],
+      // },
     },
   ],
 }
