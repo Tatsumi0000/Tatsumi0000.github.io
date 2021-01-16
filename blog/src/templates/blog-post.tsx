@@ -28,7 +28,6 @@ const BlogPostTemplate = ({ data, location }) => {
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
-          className="markdown-body"
         />
         <hr />
         <footer>
