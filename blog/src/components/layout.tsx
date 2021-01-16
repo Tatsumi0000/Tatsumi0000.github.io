@@ -27,9 +27,7 @@ const Layout = ({ location, title, children }) => {
       <main>{children}</main>
       <footer>
         <Bio />
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
+        Copyright © {new Date().getFullYear()}, Tatsumi0000 All Rights Reserved.
       </footer>
     </div>
   )
