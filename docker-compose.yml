@@ -49,5 +49,5 @@ services:
       - NODE_ENV="development"
     restart: always
     command: >
-      bash -c "npm install @chakra-ui/gatsby-plugin @chakra-ui/react @emotion/react @emotion/styled framer-motion &&
+      bash -c "npm install &&
       gatsby develop --host 0.0.0.0"
