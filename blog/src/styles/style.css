@@ -326,6 +326,9 @@ a:focus {
 	border: 1px solid green;
 	border-radius: 2em;
 }
+.blog-post-tag:before {
+	content: "#";	
+}
 
 /* Media queries */
 
