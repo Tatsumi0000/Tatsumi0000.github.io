@@ -42,7 +42,7 @@ const BlogIndex = ({ data, location }) => {
                   </h2>
                 <small>{post.frontmatter.date}</small>
                 {post.frontmatter.tags.map((tag) => (
-                  <div className="blog-post-tag">{tag}</div>
+                  <small className="blog-post-tag">{tag}</small>
                   ))}
                 <section>
                   <p
