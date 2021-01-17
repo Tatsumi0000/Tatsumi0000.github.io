@@ -1,18 +1,11 @@
 module.exports = {
+  purge: false,
+  theme: {
+    extend: {},
+  },
+  variants: {},
+  plugins: [],
   corePlugins: {
     listStyleType: false,
-    listStylePosition: false
   }
-  // purge: false,
-  // darkMode: false, // or 'media' or 'class'
-  // theme: {
-  //   extend: {},
-  // },
-  // variants: {
-  //   extend: {},
-  // },
-  // plugins: [],
-  // corePlugins: {
-  //   listStyleType: false,
-  // }
 }
