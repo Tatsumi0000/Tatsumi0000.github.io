@@ -121,7 +121,7 @@ module.exports = {
         ],
         printRejected: true,
         develop: false,
-        tailwind: false,
+        tailwind: true,
         ignore: ['normalize.css', 'style.css', 'code-highlight.css', 'prism-okaidia.css', 'prism-line-numbers.css', 'index.css'],
       },
     },
