@@ -5,6 +5,10 @@ import {
   Tag,
   TagLabel
 } from "@chakra-ui/react"
+import "../styles/style.css"
+// normalize CSS across browsers
+import "../styles/normalize.css"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
