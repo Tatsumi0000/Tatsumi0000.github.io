@@ -49,5 +49,5 @@ services:
       - NODE_ENV="development"
     restart: always
     command: >
-      bash -c "npm install &&
+      bash -c "npm install twin.macro @emotion/core @emotion/styled gatsby-plugin-emotion &&
       gatsby develop --host 0.0.0.0"
