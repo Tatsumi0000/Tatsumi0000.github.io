@@ -123,7 +123,6 @@ module.exports = {
         develop: false,
         tailwind: false,
         ignore: ['normalize.css', 'style.css', 'code-highlight.css', 'prism-okaidia.css', 'prism-line-numbers.css', 'index.css'],
-        purgeOnly: ['tailwind.css'],
       },
     },
   ],
