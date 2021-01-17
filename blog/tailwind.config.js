@@ -1,5 +1,6 @@
 module.exports = {
   purge: false,
+  listStyleType: false,
   theme: {
     extend: {},
   },
