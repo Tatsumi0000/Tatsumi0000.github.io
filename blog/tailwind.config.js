@@ -1,8 +1,6 @@
 module.exports = {
   corePlugins: {
-    float: false,
-    objectFit: false,
-    objectPosition: false,
+    listStyleType: false
   }
   // purge: false,
   // darkMode: false, // or 'media' or 'class'
