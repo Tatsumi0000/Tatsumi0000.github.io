@@ -12,5 +12,5 @@ module.exports = {
   plugins: [],
   corePlugins: {
     listStyleType: false,
-  }
+  },
 }
