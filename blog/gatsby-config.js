@@ -14,7 +14,6 @@ module.exports = {
     },
   },
   plugins: [
-    "@chakra-ui/gatsby-plugin",
     {
       resolve: 'gatsby-plugin-graphql-codegen',
       options: {

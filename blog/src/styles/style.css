@@ -315,6 +315,18 @@ a:focus {
   margin-bottom: var(--spacing-8);
 }
 
+.blog-post-tag {
+	display: inline-block;
+	margin: 0 .1em .6em 0;
+	padding: .6em;
+	line-height: 1;
+	text-decoration: none;
+	color: #0000ee;
+	background-color: #fff;
+	border: 1px solid #0000ee;
+	border-radius: 2em;
+}
+
 /* Media queries */
 
 @media (max-width: 42rem) {

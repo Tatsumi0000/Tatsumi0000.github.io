@@ -1,10 +1,5 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import {
-  HStack,
-  Tag,
-  TagLabel
-} from "@chakra-ui/react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -46,26 +41,16 @@ const BlogIndex = ({ data, location }) => {
                     </Link>
                   </h2>
                 <small>{post.frontmatter.date}</small>
-                <HStack spacing={4}>
-                  {post.frontmatter.tags.map((tag) => (
-                    <Tag
-                      size="md"
-                      key={tag}
-                      borderRadius="full"
-                      variant="solid"
-                      colorScheme="green"
-                    >
-                      <TagLabel>{tag}</TagLabel>
-                    </Tag>
+                {post.frontmatter.tags.map((tag) => (
+                  <div className="blog-post-tag">{tag}</div>
                   ))}
-                </HStack>
-               
                 <section>
                   <p
                     dangerouslySetInnerHTML={{
                       __html: post.frontmatter.description || post.excerpt,
                     }}
                     itemProp="description"
+                    className="postContent"
                   />
                 </section>
               </article>
