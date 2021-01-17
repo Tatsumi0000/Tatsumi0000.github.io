@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { Tag, TagLabel, TagLeftIcon, TagRightIcon, TagCloseButton, } from "@chakra-ui/react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -41,12 +42,20 @@ const BlogIndex = ({ data, location }) => {
                     </Link>
                   </h2>
                 <small>{post.frontmatter.date}</small>
+                <HStack spacing={4}>
                   {post.frontmatter.tags.map(tag => {
                     return (
-                      <div className="ml-4 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 rounded-full bg-white text-gray-700 border">
-                        {tag}
-                      </div>
+                      <Tag
+                        size="md"
+                        key={tag}
+                        borderRadius="full"
+                        variant="solid"
+                        colorScheme="green"
+                      >
+                        <TagLabel>{ tag }</TagLabel>
+                      </Tag>
                     )
+                  </HStack>
                   })
                 }
                

@@ -108,19 +108,9 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     {
-      resolve: 'gatsby-plugin-postcss',
+      resolve: "@chakra-ui/gatsby-plugin",
       options: {
-          postCssPlugins: [require('tailwindcss')('./tailwind.config.js')],
-       },
-    },
-    {
-      resolve: "gatsby-plugin-purgecss",
-      options: {
-        printRejected: true,
-        develop: false,
-        tailwind: true,
-        purgeOnly: ['src/utils/tailwind.css'],
       },
-    },
+    }
   ],
 }

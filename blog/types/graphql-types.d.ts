@@ -715,8 +715,8 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___title'
   | 'childMarkdownRemark___frontmatter___description'
   | 'childMarkdownRemark___frontmatter___date'
-  | 'childMarkdownRemark___frontmatter___tags'
   | 'childMarkdownRemark___frontmatter___modified_date'
+  | 'childMarkdownRemark___frontmatter___tags'
   | 'childMarkdownRemark___fields___slug'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
@@ -843,8 +843,8 @@ export type Frontmatter = {
   title?: Maybe<Scalars['String']>;
   description?: Maybe<Scalars['String']>;
   date?: Maybe<Scalars['Date']>;
-  tags?: Maybe<Array<Maybe<Scalars['String']>>>;
   modified_date?: Maybe<Scalars['Date']>;
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
 
 
@@ -867,8 +867,8 @@ export type FrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
   date?: Maybe<DateQueryOperatorInput>;
-  tags?: Maybe<StringQueryOperatorInput>;
   modified_date?: Maybe<DateQueryOperatorInput>;
+  tags?: Maybe<StringQueryOperatorInput>;
 };
 
 export type ImageCropFocus = 
@@ -1570,8 +1570,8 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___title'
   | 'frontmatter___description'
   | 'frontmatter___date'
-  | 'frontmatter___tags'
   | 'frontmatter___modified_date'
+  | 'frontmatter___tags'
   | 'fields___slug'
   | 'excerpt'
   | 'rawMarkdownBody'
@@ -2598,12 +2598,6 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___legacy'
   | 'pluginCreator___pluginOptions___theme_color_in_head'
   | 'pluginCreator___pluginOptions___cacheDigest'
-  | 'pluginCreator___pluginOptions___postCssPlugins'
-  | 'pluginCreator___pluginOptions___postCssPlugins___postcssPlugin'
-  | 'pluginCreator___pluginOptions___printRejected'
-  | 'pluginCreator___pluginOptions___develop'
-  | 'pluginCreator___pluginOptions___tailwind'
-  | 'pluginCreator___pluginOptions___purgeOnly'
   | 'pluginCreator___pluginOptions___pathCheck'
   | 'pluginCreator___nodeAPIs'
   | 'pluginCreator___browserAPIs'
@@ -2859,12 +2853,6 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___legacy'
   | 'pluginOptions___theme_color_in_head'
   | 'pluginOptions___cacheDigest'
-  | 'pluginOptions___postCssPlugins'
-  | 'pluginOptions___postCssPlugins___postcssPlugin'
-  | 'pluginOptions___printRejected'
-  | 'pluginOptions___develop'
-  | 'pluginOptions___tailwind'
-  | 'pluginOptions___purgeOnly'
   | 'pluginOptions___pathCheck'
   | 'nodeAPIs'
   | 'browserAPIs'
@@ -3024,11 +3012,6 @@ export type SitePluginPluginOptions = {
   legacy?: Maybe<Scalars['Boolean']>;
   theme_color_in_head?: Maybe<Scalars['Boolean']>;
   cacheDigest?: Maybe<Scalars['String']>;
-  postCssPlugins?: Maybe<Array<Maybe<SitePluginPluginOptionsPostCssPlugins>>>;
-  printRejected?: Maybe<Scalars['Boolean']>;
-  develop?: Maybe<Scalars['Boolean']>;
-  tailwind?: Maybe<Scalars['Boolean']>;
-  purgeOnly?: Maybe<Array<Maybe<Scalars['String']>>>;
   pathCheck?: Maybe<Scalars['Boolean']>;
 };
 
@@ -3076,11 +3059,6 @@ export type SitePluginPluginOptionsFilterInput = {
   legacy?: Maybe<BooleanQueryOperatorInput>;
   theme_color_in_head?: Maybe<BooleanQueryOperatorInput>;
   cacheDigest?: Maybe<StringQueryOperatorInput>;
-  postCssPlugins?: Maybe<SitePluginPluginOptionsPostCssPluginsFilterListInput>;
-  printRejected?: Maybe<BooleanQueryOperatorInput>;
-  develop?: Maybe<BooleanQueryOperatorInput>;
-  tailwind?: Maybe<BooleanQueryOperatorInput>;
-  purgeOnly?: Maybe<StringQueryOperatorInput>;
   pathCheck?: Maybe<BooleanQueryOperatorInput>;
 };
 
@@ -3150,18 +3128,6 @@ export type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
   wrapperStyle?: Maybe<StringQueryOperatorInput>;
 };
 
-export type SitePluginPluginOptionsPostCssPlugins = {
-  postcssPlugin?: Maybe<Scalars['String']>;
-};
-
-export type SitePluginPluginOptionsPostCssPluginsFilterInput = {
-  postcssPlugin?: Maybe<StringQueryOperatorInput>;
-};
-
-export type SitePluginPluginOptionsPostCssPluginsFilterListInput = {
-  elemMatch?: Maybe<SitePluginPluginOptionsPostCssPluginsFilterInput>;
-};
-
 export type SitePluginSortInput = {
   fields?: Maybe<Array<Maybe<SitePluginFieldsEnum>>>;
   order?: Maybe<Array<Maybe<SortOrderEnum>>>;
@@ -3208,69 +3174,6 @@ export type StringQueryOperatorInput = {
   regex?: Maybe<Scalars['String']>;
   glob?: Maybe<Scalars['String']>;
 };
-
-export type BioQueryQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type BioQueryQuery = { avatar?: Maybe<{ childImageSharp?: Maybe<{ fixed?: Maybe<GatsbyImageSharpFixedFragment> }> }>, site?: Maybe<{ siteMetadata?: Maybe<{ author?: Maybe<Pick<Author, 'name' | 'summary'>>, social?: Maybe<Pick<Social, 'github'>> }> }> };
-
-export type SiteTitleQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type SiteTitleQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
-
-export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type Unnamed_1_Query = { site?: Maybe<{ siteMetadata?: Maybe<(
-      Pick<SiteSiteMetadata, 'title' | 'description'>
-      & { social?: Maybe<Pick<Social, 'github'>> }
-    )> }> };
-
-export type Unnamed_2_QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type Unnamed_2_Query = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
-
-export type Unnamed_3_QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type Unnamed_3_Query = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }>, allMarkdownRemark: { nodes: Array<(
-      Pick<MarkdownRemark, 'excerpt'>
-      & { fields?: Maybe<Pick<Fields, 'slug'>>, frontmatter?: Maybe<Pick<Frontmatter, 'date' | 'title' | 'description' | 'tags'>> }
-    )> } };
-
-export type Unnamed_4_QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type Unnamed_4_Query = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }>, allMarkdownRemark: { group: Array<Pick<MarkdownRemarkGroupConnection, 'fieldValue' | 'totalCount'>> } };
-
-export type Unnamed_5_QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type Unnamed_5_Query = { site?: Maybe<Pick<Site, 'buildTime'>> };
-
-export type BlogPostBySlugQueryVariables = Exact<{
-  id: Scalars['String'];
-  previousPostId?: Maybe<Scalars['String']>;
-  nextPostId?: Maybe<Scalars['String']>;
-}>;
-
-
-export type BlogPostBySlugQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }>, markdownRemark?: Maybe<(
-    Pick<MarkdownRemark, 'id' | 'excerpt' | 'html'>
-    & { frontmatter?: Maybe<Pick<Frontmatter, 'title' | 'date' | 'modified_date' | 'description'>> }
-  )>, previous?: Maybe<{ fields?: Maybe<Pick<Fields, 'slug'>>, frontmatter?: Maybe<Pick<Frontmatter, 'title'>> }>, next?: Maybe<{ fields?: Maybe<Pick<Fields, 'slug'>>, frontmatter?: Maybe<Pick<Frontmatter, 'title'>> }> };
-
-export type Unnamed_6_QueryVariables = Exact<{
-  tag?: Maybe<Scalars['String']>;
-}>;
-
-
-export type Unnamed_6_Query = { allMarkdownRemark: (
-    Pick<MarkdownRemarkConnection, 'totalCount'>
-    & { edges: Array<{ node: { fields?: Maybe<Pick<Fields, 'slug'>>, frontmatter?: Maybe<Pick<Frontmatter, 'title'>> } }> }
-  ) };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
