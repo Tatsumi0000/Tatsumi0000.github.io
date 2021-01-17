@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { Tag, TagLabel, TagLeftIcon, TagRightIcon, TagCloseButton, } from "@chakra-ui/react"
+import { HStack, Tag, TagLabel, TagLeftIcon, TagRightIcon, TagCloseButton, } from "@chakra-ui/react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
