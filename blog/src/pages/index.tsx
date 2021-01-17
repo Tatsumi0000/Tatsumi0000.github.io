@@ -50,7 +50,6 @@ const BlogIndex = ({ data, location }) => {
                       __html: post.frontmatter.description || post.excerpt,
                     }}
                     itemProp="description"
-                    className="postContent"
                   />
                 </section>
               </article>
