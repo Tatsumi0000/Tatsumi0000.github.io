@@ -25,30 +25,31 @@ const BlogIndex = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <SEO title="TOP" />
       <ol style={{ listStyle: `none` }}>
-      {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
+        {posts.map(post => {
+          const title = post.frontmatter.title || post.fields.slug
+
           return (
-            <article key={node.fields.slug}>
-              <header>
-                <h3 className="text-2xl font-black mt-16 mb-2">
-                  <Link
-                    className="text-blue-600 shadow-none"
-                    to={node.fields.slug}
-                  >
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-              </header>
-              <section>
-                <p
-                  className="mb-8"
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </section>
-            </article>
+              <article key={post.fields.slug}>
+                <header>
+                  <h3 className="text-2xl font-black mt-16 mb-2">
+                    <Link
+                      className="text-blue-600 shadow-none"
+                      to={post.fields.slug}
+                    >
+                      {title}
+                    </Link>
+                  </h3>
+                  <small>{post.frontmatter.date}</small>
+                </header>
+                <section>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: post.frontmatter.description || post.excerpt,
+                    }}
+                    className="mb-8"
+                  />
+                </section>
+              </article>
           )
         })}
       </ol>
