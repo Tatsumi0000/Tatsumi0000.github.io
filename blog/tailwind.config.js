@@ -1,16 +1,14 @@
 module.exports = {
   purge: false,
   darkMode: false,
-  fontFamily: false,
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: false,
+      listStyleType: false,
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-  corePlugins: {
-    fontFamily: false,
-    listStyleType: false,
-  }
 }
