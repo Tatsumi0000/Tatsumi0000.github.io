@@ -1,0 +1,9 @@
+.markdown ul {
+    @apply list-disc mb-8;
+}
+  
+.markdown ol {
+    @apply list-decimal mb-8;
+}
+  
+  
