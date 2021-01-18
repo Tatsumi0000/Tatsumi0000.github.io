@@ -28,8 +28,8 @@ const BlogPostTemplate = ({ data, location }) => {
           {modifiedDate == null ? <p>{date} 作成</p> : <p>{date} 作成 {modifiedDate} 更新</p>}
         </header>
         <section
+          className="markdown"
           dangerouslySetInnerHTML={{ __html: post.html }}
-          itemProp="articleBody"
         />
         <hr />
         <footer>
