@@ -716,6 +716,7 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___description'
   | 'childMarkdownRemark___frontmatter___date'
   | 'childMarkdownRemark___frontmatter___modified_date'
+  | 'childMarkdownRemark___frontmatter___tags'
   | 'childMarkdownRemark___fields___slug'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
@@ -843,6 +844,7 @@ export type Frontmatter = {
   description?: Maybe<Scalars['String']>;
   date?: Maybe<Scalars['Date']>;
   modified_date?: Maybe<Scalars['Date']>;
+  tags?: Maybe<Array<Maybe<Scalars['String']>>>;
 };
 
 
@@ -866,6 +868,7 @@ export type FrontmatterFilterInput = {
   description?: Maybe<StringQueryOperatorInput>;
   date?: Maybe<DateQueryOperatorInput>;
   modified_date?: Maybe<DateQueryOperatorInput>;
+  tags?: Maybe<StringQueryOperatorInput>;
 };
 
 export type ImageCropFocus = 
@@ -1568,6 +1571,7 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___description'
   | 'frontmatter___date'
   | 'frontmatter___modified_date'
+  | 'frontmatter___tags'
   | 'fields___slug'
   | 'excerpt'
   | 'rawMarkdownBody'
@@ -1890,8 +1894,6 @@ export type QuerySiteArgs = {
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
   port?: Maybe<IntQueryOperatorInput>;
   host?: Maybe<StringQueryOperatorInput>;
-  polyfill?: Maybe<BooleanQueryOperatorInput>;
-  pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -2030,8 +2032,6 @@ export type Site = Node & {
   siteMetadata?: Maybe<SiteSiteMetadata>;
   port?: Maybe<Scalars['Int']>;
   host?: Maybe<Scalars['String']>;
-  polyfill?: Maybe<Scalars['Boolean']>;
-  pathPrefix?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
   parent?: Maybe<Node>;
   children: Array<Node>;
@@ -2237,8 +2237,6 @@ export type SiteFieldsEnum =
   | 'siteMetadata___social___github'
   | 'port'
   | 'host'
-  | 'polyfill'
-  | 'pathPrefix'
   | 'id'
   | 'parent___id'
   | 'parent___parent___id'
@@ -2331,8 +2329,6 @@ export type SiteFilterInput = {
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
   port?: Maybe<IntQueryOperatorInput>;
   host?: Maybe<StringQueryOperatorInput>;
-  polyfill?: Maybe<BooleanQueryOperatorInput>;
-  pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
   children?: Maybe<NodeFilterListInput>;
@@ -2390,12 +2386,14 @@ export type SitePageContext = {
   id?: Maybe<Scalars['String']>;
   previousPostId?: Maybe<Scalars['String']>;
   nextPostId?: Maybe<Scalars['String']>;
+  tag?: Maybe<Scalars['String']>;
 };
 
 export type SitePageContextFilterInput = {
   id?: Maybe<StringQueryOperatorInput>;
   previousPostId?: Maybe<StringQueryOperatorInput>;
   nextPostId?: Maybe<StringQueryOperatorInput>;
+  tag?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePageEdge = {
@@ -2500,6 +2498,7 @@ export type SitePageFieldsEnum =
   | 'context___id'
   | 'context___previousPostId'
   | 'context___nextPostId'
+  | 'context___tag'
   | 'pluginCreator___id'
   | 'pluginCreator___parent___id'
   | 'pluginCreator___parent___parent___id'
@@ -3193,6 +3192,11 @@ export type BioQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type BioQueryQuery = { avatar?: Maybe<{ childImageSharp?: Maybe<{ fixed?: Maybe<GatsbyImageSharpFixedFragment> }> }>, site?: Maybe<{ siteMetadata?: Maybe<{ author?: Maybe<Pick<Author, 'name' | 'summary'>>, social?: Maybe<Pick<Social, 'github'>> }> }> };
 
+export type SiteTitleQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type SiteTitleQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
+
 export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -3211,13 +3215,18 @@ export type Unnamed_3_QueryVariables = Exact<{ [key: string]: never; }>;
 
 export type Unnamed_3_Query = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }>, allMarkdownRemark: { nodes: Array<(
       Pick<MarkdownRemark, 'excerpt'>
-      & { fields?: Maybe<Pick<Fields, 'slug'>>, frontmatter?: Maybe<Pick<Frontmatter, 'date' | 'title' | 'description'>> }
+      & { fields?: Maybe<Pick<Fields, 'slug'>>, frontmatter?: Maybe<Pick<Frontmatter, 'date' | 'title' | 'description' | 'tags'>> }
     )> } };
 
 export type Unnamed_4_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_4_Query = { site?: Maybe<Pick<Site, 'buildTime'>> };
+export type Unnamed_4_Query = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }>, allMarkdownRemark: { group: Array<Pick<MarkdownRemarkGroupConnection, 'fieldValue' | 'totalCount'>> } };
+
+export type Unnamed_5_QueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type Unnamed_5_Query = { site?: Maybe<Pick<Site, 'buildTime'>> };
 
 export type BlogPostBySlugQueryVariables = Exact<{
   id: Scalars['String'];
@@ -3230,6 +3239,16 @@ export type BlogPostBySlugQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<Sit
     Pick<MarkdownRemark, 'id' | 'excerpt' | 'html'>
     & { frontmatter?: Maybe<Pick<Frontmatter, 'title' | 'date' | 'modified_date' | 'description'>> }
   )>, previous?: Maybe<{ fields?: Maybe<Pick<Fields, 'slug'>>, frontmatter?: Maybe<Pick<Frontmatter, 'title'>> }>, next?: Maybe<{ fields?: Maybe<Pick<Fields, 'slug'>>, frontmatter?: Maybe<Pick<Frontmatter, 'title'>> }> };
+
+export type Unnamed_6_QueryVariables = Exact<{
+  tag?: Maybe<Scalars['String']>;
+}>;
+
+
+export type Unnamed_6_Query = { allMarkdownRemark: (
+    Pick<MarkdownRemarkConnection, 'totalCount'>
+    & { edges: Array<{ node: { fields?: Maybe<Pick<Fields, 'slug'>>, frontmatter?: Maybe<Pick<Frontmatter, 'title'>> } }> }
+  ) };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
