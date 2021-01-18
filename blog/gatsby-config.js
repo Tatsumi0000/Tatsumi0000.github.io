@@ -108,15 +108,15 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
     `gatsby-plugin-postcss`,
-    {
-      resolve: `gatsby-plugin-purgecss`,
-      options: {
-        rejected:true,       
-        printRejected: false,
-        develop: false,
-        tailwind: true,
-        purgeOnly : ['tailwind.css'],
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-purgecss`,
+    //   options: {
+    //     rejected:true,       
+    //     printRejected: false,
+    //     develop: false,
+    //     tailwind: true,
+    //     purgeOnly : ['tailwind.css'],
+    //   }
+    // },
   ],
 }

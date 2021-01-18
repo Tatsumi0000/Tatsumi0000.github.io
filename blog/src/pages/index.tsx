@@ -48,8 +48,7 @@ const BlogIndex = ({ data, location }) => {
                     dangerouslySetInnerHTML={{
                       __html: post.frontmatter.description || post.excerpt,
                     }}
-                    itemProp="description"
-                    className="markdown-body"
+                    className="mb-8"
                   />
                 </section>
               </article>
