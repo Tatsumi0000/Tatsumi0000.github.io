@@ -8,9 +8,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-  corePlugins: {
-    fontFamily: false,
-    listStyleType: false,
-    listStylePosition: false,
-  }
 }
