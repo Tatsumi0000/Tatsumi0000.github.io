@@ -1,8 +1,6 @@
 module.exports = {
   purge: false,
   darkMode: false,
-  fontFamily: false,
-  listStyleType: false,
   theme: {
     extend: {},
   },
@@ -10,4 +8,9 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  corePlugins: {
+    fontFamily: false,
+    listStyleType: false,
+    listStylePosition: false,
+  }
 }
