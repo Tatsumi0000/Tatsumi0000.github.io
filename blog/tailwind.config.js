@@ -1,11 +1,10 @@
 module.exports = {
   purge: false,
   darkMode: false,
+  fontFamily: false,
+  listStyleType: false,
   theme: {
-    extend: {
-      fontFamily: false,
-      listStyleType: false,
-    },
+    extend: {},
   },
   variants: {
     extend: {},
