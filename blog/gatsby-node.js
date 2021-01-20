@@ -57,17 +57,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   }
     // Contentful Post List
-  const cflPostsPerPage = 5
-  const cflNumPages = Math.ceil(cflPosts.length / cflPostsPerPage)
+  const perPage = 5
+  const numPages = Math.ceil(posts / perPage)
   
-  Array.from({ length: cflNumPages }).forEach((_, i) => {
+  Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/` : `/${i + 1}`,
       component: blogPostListTemplate,
       context: {
-        limit: cflPostsPerPage,
-        skip: i * cflPostsPerPage,
-        numPages: cflNumPages,
+        limit: perPage,
+        skip: i * perPage,
+        numPages: numPages,
         currentPage: i + 1,
       },
     })
