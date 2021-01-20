@@ -44,7 +44,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const perPage = 2
     const numPages = Math.ceil(posts.length / perPage)
 
-    posts.from({length: numPages}).forEach((post, index) => {
+    posts.slice(numPages).forEach((post, index) => {
       const previousPostId = index === 0 ? null : posts[index - 1].id
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
 
