@@ -58,7 +58,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
     // Contentful Post List
   const perPage = 2
-  const numPages = Math.ceil(posts / perPage)
+  const numPages = Math.ceil(posts.length / perPage)
   
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
