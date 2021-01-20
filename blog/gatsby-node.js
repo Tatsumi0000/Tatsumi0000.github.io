@@ -41,6 +41,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // `context` is available in the template as a prop and as a variable in GraphQL
 
   if (posts.length > 0) {
+    const perPage = 2
+    const numPages = Math.ceil(posts.length / perPage)
+
     posts.forEach((post, index) => {
       const previousPostId = index === 0 ? null : posts[index - 1].id
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
@@ -52,26 +55,30 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           id: post.id,
           previousPostId,
           nextPostId,
+          limit: perPage,
+          skip: i * perPage,
+          numPages: numPages,
+          currentPage: i + 1,
         },
       })
     })
   }
     // Contentful Post List
-  const perPage = 2
-  const numPages = Math.ceil(posts.length / perPage)
+  // const perPage = 2
+  // const numPages = Math.ceil(posts.length / perPage)
   
-  Array.from({ length: numPages }).forEach((_, i) => {
-    createPage({
-      path: i === 0 ? `/` : `/${i + 1}`,
-      component: blogPostListTemplate,
-      context: {
-        limit: perPage,
-        skip: i * perPage,
-        numPages: numPages,
-        currentPage: i + 1,
-      },
-    })
-  })
+  // Array.from({ length: numPages }).forEach((_, i) => {
+  //   createPage({
+  //     path: i === 0 ? `/` : `/${i + 1}`,
+  //     component: blogPostListTemplate,
+  //     context: {
+  //       limit: perPage,
+  //       skip: i * perPage,
+  //       numPages: numPages,
+  //       currentPage: i + 1,
+  //     },
+  //   })
+  // })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
