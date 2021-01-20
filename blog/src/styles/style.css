@@ -27,7 +27,7 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-original: "游ゴシック体", "Yugothic", "游ゴシック", "Yu Gothic", "Verdana", "メイリオ", "-apple-system", "sans-serif";
+  --fontFamily-original: "Yugothic", "游ゴシック体", "游ゴシック", "Yu Gothic", "Verdana", "メイリオ", "-apple-system", "sans-serif";
   --font-body: var(--fontFamily-original);
   --font-heading: var(--fontFamily-original);
   --fontWeight-normal: 400;
