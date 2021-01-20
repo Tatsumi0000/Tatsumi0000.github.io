@@ -56,9 +56,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           previousPostId,
           nextPostId,
           limit: perPage,
-          skip: i * perPage,
+          skip: index * perPage,
           numPages: numPages,
-          currentPage: i + 1,
+          currentPage: index + 1,
         },
       })
     })
