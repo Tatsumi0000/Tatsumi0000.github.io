@@ -3,10 +3,12 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Pagination from '../components/pagination'
 
-const BlogIndex = ({ data, location }) => {
+const BlogIndex = ({ data, location, pageContext }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
+  const { currentPage, numPages } = pageContext
 
   if (posts.length === 0) {
     return (
@@ -64,6 +66,7 @@ const BlogIndex = ({ data, location }) => {
           )
         })}
       </ol>
+      <Pagination numPages={numPages} currentPage={currentPage} pathBase="/" />
     </Layout>
   )
 }

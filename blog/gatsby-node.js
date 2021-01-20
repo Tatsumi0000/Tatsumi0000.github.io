@@ -56,6 +56,22 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+    // Contentful Post List
+  const cflPostsPerPage = 5
+  const cflNumPages = Math.ceil(cflPosts.length / cflPostsPerPage)
+  
+  Array.from({ length: cflNumPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/` : `/${i + 1}`,
+      component: blogPostListTemplate,
+      context: {
+        limit: cflPostsPerPage,
+        skip: i * cflPostsPerPage,
+        numPages: cflNumPages,
+        currentPage: i + 1,
+      },
+    })
+  })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
