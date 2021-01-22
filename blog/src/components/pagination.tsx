@@ -29,7 +29,7 @@ const Pagenation = ({ pageContext }) => {
           </Link> : <div className="h-12 w-12 mr-1 flex justify-center items-center rounded-full bg-gray-200 cursor-pointer"><FontAwesomeIcon icon={faAngleLeft}/></div> }
         
         <div className="flex h-12 font-medium rounded-full bg-gray-200">
-            <div className="w-12 md:flex justify-center items-center hidden  cursor-pointer leading-5 transition duration-150 ease-in rounded-full">{humanPageNumber}</div>
+            <div className="w-12 md:flex justify-center items-center cursor-pointer leading-5 transition duration-150 ease-in rounded-full">{humanPageNumber}</div>
         </div>
       
       {nextPagePath ? <Link to={nextPagePath} className="h-12 w-12 ml-1 flex justify-center items-center rounded-full bg-gray-200 cursor-pointer">
