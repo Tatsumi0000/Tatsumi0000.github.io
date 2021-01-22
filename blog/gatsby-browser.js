@@ -9,7 +9,7 @@ import "tailwindcss/utilities.css"
 // import "./src/styles/normalize.css"
 // custom CSS styles
 import "./src/styles/style.css"
-
+import "@fortawesome/fontawesome-svg-core/styles.css";
 // Highlighting for code blocks
 import "prismjs/themes/prism-okaidia.css"
 import "prismjs/plugins/line-numbers/prism-line-numbers.css"

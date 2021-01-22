@@ -1,97 +1,50 @@
-import React from "react"
+import React from "react";
 import { Link } from "gatsby"
+import { navigate } from "gatsby";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { config, library } from "@fortawesome/fontawesome-svg-core"
+import { faAngleDoubleLeft, faAngleLeft ,faAngleDoubleRight, faAngleRight } from "@fortawesome/free-solid-svg-icons"
 
-interface PaginationProps {
-  numPages: number
-  currentPage: number
-  pathBase?: string
-}
+config.autoAddCss = false;
+library.add(faAngleDoubleLeft, faAngleLeft ,faAngleDoubleRight, faAngleRight);
 
-const Pagination = ({ numPages, currentPage, pathBase }: PaginationProps) => {
-  const isFirst = currentPage === 1
-  const isLast = currentPage === numPages
-  const pageLimit = 3
-  const omitFirst = currentPage - 1 > pageLimit
-  const omitLast = numPages - currentPage > pageLimit
-  const prevPage =
-    currentPage - 1 === 1 ? pathBase : pathBase + (currentPage - 1).toString()
-  const nextPage = pathBase + (currentPage + 1).toString()
 
-  const prevText = '前へ'
-  const nextText = '次へ'
-  const paginationTag =
-    numPages !== 1 ? (
-      <nav className="pagination">
-        <div>
-          {!isFirst ? (
-            <Link to={prevPage} rel="prev">
-              {prevText}
-            </Link>
-          ) : (
-            <span>{prevText}</span>
-          )}
+const Pagenation = ({ pageContext }) => {
+  const { previousPagePath, nextPagePath, humanPageNumber, numberOfPages } = pageContext;
+
+  const handleChange = (event, value) => {
+    value === 1 ? navigate(`/`) : navigate(`/${value}`);
+  };
+
+  return (
+
+<div className="flex flex-col items-center my-12">
+    <div className="flex text-gray-700">
+    
+    {humanPageNumber !== 1 ? <Link to={"/"} className="h-12 w-12 mr-1 flex justify-center items-center rounded-full bg-gray-200 cursor-pointer">
+    <FontAwesomeIcon icon={faAngleDoubleLeft}/>
+    </Link> : <div className="h-12 w-12 mr-1 flex justify-center items-center rounded-full bg-gray-200 cursor-pointer"><FontAwesomeIcon icon={faAngleDoubleLeft}/></div>}
+      {previousPagePath ? <Link to={previousPagePath} className="h-12 w-12 mr-1 flex justify-center items-center rounded-full bg-gray-200 cursor-pointer">
+        <FontAwesomeIcon icon={faAngleLeft}/>
+          </Link> : <div className="h-12 w-12 mr-1 flex justify-center items-center rounded-full bg-gray-200 cursor-pointer"><FontAwesomeIcon icon={faAngleLeft}/></div> }
+        
+        <div className="flex h-12 font-medium rounded-full bg-gray-200">
+            <div className="w-12 md:flex justify-center items-center hidden  cursor-pointer leading-5 transition duration-150 ease-in rounded-full">{humanPageNumber}</div>
         </div>
+      
+      {nextPagePath ? <Link to={nextPagePath} className="h-12 w-12 ml-1 flex justify-center items-center rounded-full bg-gray-200 cursor-pointer">
+        <FontAwesomeIcon icon={faAngleRight}/>
+          </Link> : <div className="h-12 w-12 ml-1 flex justify-center items-center rounded-full bg-gray-200 cursor-pointer"><FontAwesomeIcon icon={faAngleRight}/></div> }
+    {humanPageNumber !== numberOfPages ? <Link to={"/"+numberOfPages} className="h-12 w-12 ml-1 flex justify-center items-center rounded-full bg-gray-200 cursor-pointer">
+    <FontAwesomeIcon icon={faAngleDoubleRight}/>
+    </Link> : <div className="h-12 w-12 ml-1 flex justify-center items-center rounded-full bg-gray-200 cursor-pointer"><FontAwesomeIcon icon={faAngleDoubleRight}/></div>}
+    </div>
+</div> 
 
-        <div>
-          <ul>
-            {
-              /*FirstPage*/
-              !isFirst && (
-                <div>
-                  <li className="number--firstlast">
-                    <Link to={pathBase}>1</Link>
-                    {omitFirst && <span>…</span>}
-                  </li>
-                </div>
-              )
-            }
-            {Array.from({ length: numPages }, (_, i) =>
-              i + 1 === currentPage ? (
-                <li
-                  key={`pagination-number${i + 1}`}
-                  className="number--current"
-                >
-                  <span>{i + 1}</span>
-                </li>
-              ) : (
-                i > 0 &&
-                i < numPages - 1 &&
-                currentPage - pageLimit < i + 1 &&
-                i + 1 < currentPage + pageLimit && (
-                  <li
-                    key={`pagination-number${i + 1}`}
-                    className="number--link"
-                  >
-                    <Link to={pathBase + (i === 0 ? '' : i + 1)}>{i + 1}</Link>
-                  </li>
-                )
-              )
-            )}
-            {
-              /*LastPage*/
-              !isLast && (
-                <li className="number--firstlast">
-                  {omitLast && <span>…</span>}
-                  <Link to={pathBase + numPages}>{numPages}</Link>
-                </li>
-              )
-            }
-          </ul>
-        </div>
-
-        <div>
-          {!isLast ? (
-            <Link to={nextPage} rel="next">
-              {nextText}
-            </Link>
-          ) : (
-            <span>{nextText}</span>
-          )}
-        </div>
-      </nav>
-    ) : null
-
-  return paginationTag
-}
-
-export default Pagination
+    // <div>
+    //  {previousPagePath ? <Link to={previousPagePath}>前のページ</Link> : null }
+		//  {nextPagePath ? <Link to={nextPagePath}>次のページ</Link> : null }
+    // </div>
+  );
+};
+export default Pagenation;

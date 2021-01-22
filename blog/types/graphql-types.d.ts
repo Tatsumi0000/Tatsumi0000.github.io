@@ -1922,6 +1922,7 @@ export type QuerySitePageArgs = {
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
   isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
+  context?: Maybe<SitePageContextFilterInput>;
   pluginCreator?: Maybe<SitePluginFilterInput>;
   pluginCreatorId?: Maybe<StringQueryOperatorInput>;
   componentPath?: Maybe<StringQueryOperatorInput>;
@@ -2362,6 +2363,7 @@ export type SitePage = Node & {
   children: Array<Node>;
   internal: Internal;
   isCreatedByStatefulCreatePages?: Maybe<Scalars['Boolean']>;
+  context?: Maybe<SitePageContext>;
   pluginCreator?: Maybe<SitePlugin>;
   pluginCreatorId?: Maybe<Scalars['String']>;
   componentPath?: Maybe<Scalars['String']>;
@@ -2386,6 +2388,32 @@ export type SitePageConnectionGroupArgs = {
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
   field: SitePageFieldsEnum;
+};
+
+export type SitePageContext = {
+  pageNumber?: Maybe<Scalars['Int']>;
+  humanPageNumber?: Maybe<Scalars['Int']>;
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+  numberOfPages?: Maybe<Scalars['Int']>;
+  previousPagePath?: Maybe<Scalars['String']>;
+  nextPagePath?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['String']>;
+  previousPostId?: Maybe<Scalars['String']>;
+  nextPostId?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextFilterInput = {
+  pageNumber?: Maybe<IntQueryOperatorInput>;
+  humanPageNumber?: Maybe<IntQueryOperatorInput>;
+  skip?: Maybe<IntQueryOperatorInput>;
+  limit?: Maybe<IntQueryOperatorInput>;
+  numberOfPages?: Maybe<IntQueryOperatorInput>;
+  previousPagePath?: Maybe<StringQueryOperatorInput>;
+  nextPagePath?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  previousPostId?: Maybe<StringQueryOperatorInput>;
+  nextPostId?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePageEdge = {
@@ -2487,6 +2515,16 @@ export type SitePageFieldsEnum =
   | 'internal___owner'
   | 'internal___type'
   | 'isCreatedByStatefulCreatePages'
+  | 'context___pageNumber'
+  | 'context___humanPageNumber'
+  | 'context___skip'
+  | 'context___limit'
+  | 'context___numberOfPages'
+  | 'context___previousPagePath'
+  | 'context___nextPagePath'
+  | 'context___id'
+  | 'context___previousPostId'
+  | 'context___nextPostId'
   | 'pluginCreator___id'
   | 'pluginCreator___parent___id'
   | 'pluginCreator___parent___parent___id'
@@ -2618,6 +2656,7 @@ export type SitePageFilterInput = {
   children?: Maybe<NodeFilterListInput>;
   internal?: Maybe<InternalFilterInput>;
   isCreatedByStatefulCreatePages?: Maybe<BooleanQueryOperatorInput>;
+  context?: Maybe<SitePageContextFilterInput>;
   pluginCreator?: Maybe<SitePluginFilterInput>;
   pluginCreatorId?: Maybe<StringQueryOperatorInput>;
   componentPath?: Maybe<StringQueryOperatorInput>;
@@ -3195,15 +3234,7 @@ export type Unnamed_2_Query = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSit
 export type Unnamed_3_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type Unnamed_3_Query = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }>, allMarkdownRemark: { nodes: Array<(
-      Pick<MarkdownRemark, 'excerpt'>
-      & { fields?: Maybe<Pick<Fields, 'slug'>>, frontmatter?: Maybe<Pick<Frontmatter, 'date' | 'title' | 'description' | 'tags'>> }
-    )> } };
-
-export type Unnamed_4_QueryVariables = Exact<{ [key: string]: never; }>;
-
-
-export type Unnamed_4_Query = { site?: Maybe<Pick<Site, 'buildTime'>> };
+export type Unnamed_3_Query = { site?: Maybe<Pick<Site, 'buildTime'>> };
 
 export type BlogPostBySlugQueryVariables = Exact<{
   id: Scalars['String'];
@@ -3216,6 +3247,17 @@ export type BlogPostBySlugQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<Sit
     Pick<MarkdownRemark, 'id' | 'excerpt' | 'html'>
     & { frontmatter?: Maybe<Pick<Frontmatter, 'title' | 'date' | 'modified_date' | 'description' | 'tags'>> }
   )>, previous?: Maybe<{ fields?: Maybe<Pick<Fields, 'slug'>>, frontmatter?: Maybe<Pick<Frontmatter, 'title'>> }>, next?: Maybe<{ fields?: Maybe<Pick<Fields, 'slug'>>, frontmatter?: Maybe<Pick<Frontmatter, 'title'>> }> };
+
+export type Unnamed_4_QueryVariables = Exact<{
+  skip: Scalars['Int'];
+  limit: Scalars['Int'];
+}>;
+
+
+export type Unnamed_4_Query = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }>, allMarkdownRemark: { nodes: Array<(
+      Pick<MarkdownRemark, 'excerpt'>
+      & { fields?: Maybe<Pick<Fields, 'slug'>>, frontmatter?: Maybe<Pick<Frontmatter, 'date' | 'title' | 'description' | 'tags'>> }
+    )> } };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 

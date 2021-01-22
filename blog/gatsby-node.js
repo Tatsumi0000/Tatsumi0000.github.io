@@ -1,6 +1,7 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
+const { paginate } = require("gatsby-awesome-pagination")
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
@@ -41,6 +42,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // `context` is available in the template as a prop and as a variable in GraphQL
 
   if (posts.length > 0) {
+  // 記事リストページ生成
+  const template = path.resolve(`./src/templates/index.tsx`)
+  paginate({
+    createPage,
+    items: posts,
+    itemsPerPage: 3,
+    component: template,
+    pathPrefix: (({ pageNumber }) => (pageNumber === 0 ? "/" : "/"))
+  })
+
     posts.forEach((post, index) => {
       const previousPostId = index === 0 ? null : posts[index - 1].id
       const nextPostId = index === posts.length - 1 ? null : posts[index + 1].id
