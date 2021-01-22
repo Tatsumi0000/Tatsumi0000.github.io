@@ -1,8 +1,15 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { config, library } from "@fortawesome/fontawesome-svg-core"
+import { faClock, faSync } from "@fortawesome/free-solid-svg-icons"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+config.autoAddCss = false;
+library.add(faClock, faSync);
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -24,7 +31,7 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
-          {modifiedDate == null ? <p>{date} 作成</p> : <p>{date} 作成 {modifiedDate} 更新</p>}
+          {modifiedDate == null ? <p><FontAwesomeIcon icon={faClock}/> {date}</p> : <p><FontAwesomeIcon icon={faClock}/> {date} <FontAwesomeIcon icon={faSync}/> {modifiedDate}</p>}
         </header>
         <section
           className="markdown"
