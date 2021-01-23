@@ -55,6 +55,7 @@ const BlogPostTemplate = ({ data, location }) => {
               </Link>
             )}
           </li>
+          
           <li>
             {next && (
               <Link to={next.fields.slug} rel="next">

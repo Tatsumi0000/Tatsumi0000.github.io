@@ -5,3 +5,7 @@
 .markdown ol {
     @apply list-decimal mb-8;
 }
+
+.markdown li > ul {
+    margin-bottom: 0;
+}
