@@ -43,9 +43,10 @@ const BlogIndex = ({ data, location, pageContext }) => {
                     </Link>
                   </h2>
                   <small>{post.frontmatter.date}</small>
-                  {post.frontmatter.tags.map((tag) => {
+                  {post.frontmatter.tags.map((tag, index) => {
                     return (
                       <div className="ml-4 text-xs inline-flex items-center font-bold leading-sm px-3 py-1 rounded-full bg-white text-gray-700 border"
+                      key={index}
                       >
                         {tag}
                       </div>

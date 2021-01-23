@@ -14,7 +14,7 @@ const Pagenation = ({ pageContext }) => {
 
   // ドロップダウンリストから選択したページに遷移
   const transitionPage = (transitionPageNumber) => {
-    transitionPageNumber === 1 ? navigate('/') : navigate(`/${transitionPageNumber}`)
+    transitionPageNumber === `1` ? navigate('/') : navigate(`/${transitionPageNumber}`)
   };
 
   // ページネーションの総ページ数
@@ -38,10 +38,10 @@ const Pagenation = ({ pageContext }) => {
       >
         {pageCounts.map((pageCount) => {
           if (pageCount === humanPageNumber) {
-            return <option selected className="w-12 flex justify-center text-center items-center cursor-pointer rounded-full">{pageCount}</option>
+            return <option selected className="w-12 flex justify-center text-center items-center cursor-pointer rounded-full" key={pageCount}>{pageCount}</option>
           } else {
             // return <option onClick={() => transitionPage(pageCount)} className="w-12 flex justify-center items-center cursor-pointer rounded-full">{pageCount}</option>
-            return <option value={`${pageCount}`} className="w-12 flex justify-center items-center cursor-pointer rounded-full">{pageCount}</option>
+            return <option value={pageCount} className="w-12 flex justify-center items-center cursor-pointer rounded-full" key={pageCount}>{pageCount}</option>
           }
         })}
       </select>

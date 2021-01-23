@@ -3,9 +3,10 @@
     margin: 2rem auto;
     border: #005b99 1px;
     border-radius: 8px;
-    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     line-height: 1.5;
 }
+
 .table-of-content:before {
     content: "目次";
     font-size: 110%;
