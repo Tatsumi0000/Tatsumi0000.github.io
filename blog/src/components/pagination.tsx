@@ -52,6 +52,7 @@ const Pagenation = ({ pageContext }) => {
     </Link> : <div className="h-12 w-12 ml-1 flex justify-center items-center rounded-full bg-gray-200 cursor-pointer"><FontAwesomeIcon icon={faAngleDoubleRight}/></div>}
     </div>
 </div> 
+
   );
 };
 export default Pagenation;
