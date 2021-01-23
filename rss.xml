@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[私的歌詞倉庫]]></title><description><![CDATA[プログラミングや日常について書くブログです。]]></description><link>https://gatsby-starter-blog-demo.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 23 Jan 2021 08:15:06 GMT</lastBuildDate><item><title><![CDATA[ブログ始めました]]></title><description><![CDATA[ブログ始めました Gatsbyを使ってブログを作りました。といっても、starterkitそのままです。一応少しだけ改良しました。 TypeScript化 ソースコードのハイライトをキレイにした フッターの改良 外部サイトを開く時は新規タブで開く GitHubのmaster…]]></description><link>https://gatsby-starter-blog-demo.netlify.app/2021/01/16/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.app/2021/01/16/</guid><pubDate>Sat, 16 Jan 2021 16:58:00 GMT</pubDate><content:encoded>&lt;h2&gt;ブログ始めました&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[私的歌詞倉庫]]></title><description><![CDATA[プログラミングや日常について書くブログです。]]></description><link>https://gatsby-starter-blog-demo.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 23 Jan 2021 09:45:55 GMT</lastBuildDate><item><title><![CDATA[ブログ始めました]]></title><description><![CDATA[ブログ始めました Gatsbyを使ってブログを作りました。といっても、starterkitそのままです。一応少しだけ改良しました。 TypeScript化 ソースコードのハイライトをキレイにした フッターの改良 外部サイトを開く時は新規タブで開く GitHubのmaster…]]></description><link>https://gatsby-starter-blog-demo.netlify.app/2021/01/16/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.app/2021/01/16/</guid><pubDate>Sat, 16 Jan 2021 16:58:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;ブログ始めました&quot;&gt;ブログ始めました&lt;/h1&gt;
 &lt;p&gt;Gatsbyを使ってブログを作りました。といっても、starterkitそのままです。一応少しだけ改良しました。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;TypeScript化&lt;/li&gt;
@@ -16,7 +16,7 @@ Consonantia, there live the blind texts. Separated they live in…]]></descripti
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
 right at the coast of the Semantics, a large language ocean. A small river named
 Duden flows by their place and supplies it with the necessary regelialia.&lt;/p&gt;
-&lt;h2&gt;On deer horse aboard tritely yikes and much&lt;/h2&gt;
+&lt;h2 id=&quot;on-deer-horse-aboard-tritely-yikes-and-much&quot;&gt;On deer horse aboard tritely yikes and much&lt;/h2&gt;
 &lt;p&gt;The Big Oxmox advised her not to do so, because there were thousands of bad
 Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
 didn’t listen. She packed her seven versalia, put her initial into the belt and
@@ -36,7 +36,7 @@ view back on the skyline of her hometown &lt;em&gt;Bookmarksgrove&lt;/em&gt;, th
 &lt;a href=&quot;http://google.com&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Alphabet Village&lt;/a&gt; and the subline of her own road, the Line
 Lane. Pityful a rhetoric question ran over her cheek, then she continued her
 way. On her way she met a copy.&lt;/p&gt;
-&lt;h3&gt;Overlaid the jeepers uselessly much excluding&lt;/h3&gt;
+&lt;h3 id=&quot;overlaid-the-jeepers-uselessly-much-excluding&quot;&gt;Overlaid the jeepers uselessly much excluding&lt;/h3&gt;
 &lt;p&gt;But nothing the copy said could convince her and so it didn’t take long until a
 few insidious Copy Writers ambushed her, made her drunk with
 &lt;a href=&quot;http://google.com&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Longe and Parole&lt;/a&gt; and dragged her into their agency, where
@@ -51,7 +51,7 @@ right at the coast of the Semantics, a large language ocean.&lt;/p&gt;
 mouth. Even the all-powerful Pointing has no control about the blind texts it is
 an almost unorthographic life One day however a small line of blind text by the
 name of Lorem Ipsum decided to leave for the far World of Grammar.&lt;/p&gt;
-&lt;h3&gt;According a funnily until pre-set or arrogant well cheerful&lt;/h3&gt;
+&lt;h3 id=&quot;according-a-funnily-until-pre-set-or-arrogant-well-cheerful&quot;&gt;According a funnily until pre-set or arrogant well cheerful&lt;/h3&gt;
 &lt;p&gt;The Big Oxmox advised her not to do so, because there were thousands of bad
 Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
 didn’t listen. She packed her seven versalia, put her initial into the belt and
@@ -80,7 +80,7 @@ and dragged her into their agency, where they abused her for their projects
 again and again. And if she hasn’t been rewritten, then they are still using
 her. Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts.&lt;/p&gt;
-&lt;h4&gt;Silent delightfully including because before one up barring chameleon&lt;/h4&gt;
+&lt;h4 id=&quot;silent-delightfully-including-because-before-one-up-barring-chameleon&quot;&gt;Silent delightfully including because before one up barring chameleon&lt;/h4&gt;
 &lt;p&gt;Separated they live in Bookmarksgrove right at the coast of the Semantics, a
 large language ocean. A small river named Duden flows by their place and
 supplies it with the necessary regelialia. It is a paradisematic country, in
@@ -90,14 +90,14 @@ almost unorthographic life One day however a small line of blind text by the
 name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox
 advised her not to do so, because there were thousands of bad Commas, wild
 Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.&lt;/p&gt;
-&lt;h5&gt;Wherever far wow thus a squirrel raccoon jeez jaguar this from along&lt;/h5&gt;
+&lt;h5 id=&quot;wherever-far-wow-thus-a-squirrel-raccoon-jeez-jaguar-this-from-along&quot;&gt;Wherever far wow thus a squirrel raccoon jeez jaguar this from along&lt;/h5&gt;
 &lt;p&gt;She packed her seven versalia, put her initial into the belt and made herself on
 the way. When she reached the first hills of the Italic Mountains, she had a
 last view back on the skyline of her hometown Bookmarksgrove, the headline of
 Alphabet Village and the subline of her own road, the Line Lane. Pityful a
 rhetoric question ran over her cheek, then she continued her way. On her way she
 met a copy.&lt;/p&gt;
-&lt;h6&gt;Slapped cozy a that lightheartedly and far&lt;/h6&gt;
+&lt;h6 id=&quot;slapped-cozy-a-that-lightheartedly-and-far&quot;&gt;Slapped cozy a that lightheartedly and far&lt;/h6&gt;
 &lt;p&gt;The copy warned the Little Blind Text, that where it came from it would have
 been rewritten a thousand times and everything that was left from its origin
 would be the word “and” and the Little Blind Text should turn around and return
@@ -196,31 +196,31 @@ firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://raw.github.com/adamschwartz/github-markdown-kitchen-sink/master/README.md&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;View raw (TEST.md)&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;This is a paragraph.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;This is a paragraph.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1&gt;Header 1&lt;/h1&gt;
-&lt;h2&gt;Header 2&lt;/h2&gt;
+&lt;h1 id=&quot;header-1&quot;&gt;Header 1&lt;/h1&gt;
+&lt;h2 id=&quot;header-2&quot;&gt;Header 2&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Header 1
 ========
 
 Header 2
 --------&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1&gt;Header 1&lt;/h1&gt;
-&lt;h2&gt;Header 2&lt;/h2&gt;
-&lt;h3&gt;Header 3&lt;/h3&gt;
-&lt;h4&gt;Header 4&lt;/h4&gt;
-&lt;h5&gt;Header 5&lt;/h5&gt;
-&lt;h6&gt;Header 6&lt;/h6&gt;
+&lt;h1 id=&quot;header-1-1&quot;&gt;Header 1&lt;/h1&gt;
+&lt;h2 id=&quot;header-2-1&quot;&gt;Header 2&lt;/h2&gt;
+&lt;h3 id=&quot;header-3&quot;&gt;Header 3&lt;/h3&gt;
+&lt;h4 id=&quot;header-4&quot;&gt;Header 4&lt;/h4&gt;
+&lt;h5 id=&quot;header-5&quot;&gt;Header 5&lt;/h5&gt;
+&lt;h6 id=&quot;header-6&quot;&gt;Header 6&lt;/h6&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# Header 1
 ## Header 2
 ### Header 3
 #### Header 4
 ##### Header 5
 ###### Header 6&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1&gt;Header 1&lt;/h1&gt;
-&lt;h2&gt;Header 2&lt;/h2&gt;
-&lt;h3&gt;Header 3&lt;/h3&gt;
-&lt;h4&gt;Header 4&lt;/h4&gt;
-&lt;h5&gt;Header 5&lt;/h5&gt;
-&lt;h6&gt;Header 6&lt;/h6&gt;
+&lt;h1 id=&quot;header-1-2&quot;&gt;Header 1&lt;/h1&gt;
+&lt;h2 id=&quot;header-2-2&quot;&gt;Header 2&lt;/h2&gt;
+&lt;h3 id=&quot;header-3-1&quot;&gt;Header 3&lt;/h3&gt;
+&lt;h4 id=&quot;header-4-1&quot;&gt;Header 4&lt;/h4&gt;
+&lt;h5 id=&quot;header-5-1&quot;&gt;Header 5&lt;/h5&gt;
+&lt;h6 id=&quot;header-6-1&quot;&gt;Header 6&lt;/h6&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# Header 1 #
 ## Header 2 ##
 ### Header 3 ###
@@ -232,7 +232,7 @@ Header 2
 &lt;/blockquote&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;gt; Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;blockquote&gt;
-&lt;h2&gt;This is a header.&lt;/h2&gt;
+&lt;h2 id=&quot;this-is-a-header&quot;&gt;This is a header.&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;This is the first list item.&lt;/li&gt;
 &lt;li&gt;This is the second list item.&lt;/li&gt;
