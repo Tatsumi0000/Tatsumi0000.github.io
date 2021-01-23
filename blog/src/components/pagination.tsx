@@ -52,11 +52,6 @@ const Pagenation = ({ pageContext }) => {
     </Link> : <div className="h-12 w-12 ml-1 flex justify-center items-center rounded-full bg-gray-200 cursor-pointer"><FontAwesomeIcon icon={faAngleDoubleRight}/></div>}
     </div>
 </div> 
-
-    // <div>
-    //  {previousPagePath ? <Link to={previousPagePath}>前のページ</Link> : null }
-		//  {nextPagePath ? <Link to={nextPagePath}>次のページ</Link> : null }
-    // </div>
   );
 };
 export default Pagenation;
