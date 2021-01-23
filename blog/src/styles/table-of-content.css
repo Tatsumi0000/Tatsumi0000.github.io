@@ -1,0 +1,37 @@
+.table-of-content {
+    max-width: 600px;
+    margin: 2rem auto;
+    border: #005b99 1px;
+    border-radius: 8px;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    line-height: 1.5;
+}
+.table-of-content:before {
+    content: "目次";
+    font-size: 110%;
+    font-weight: bold;
+}
+
+.table-of-content > ul {
+    color: #1e366a;
+    border: dotted #1e366a 1px;/*ドット 色 太さ*/
+    padding: 0.5em 0.5em 0.5em 2em;
+    @apply list-disc mb-8;
+}
+
+.table-of-content > ol {
+    color: #1e366a;
+    border: dotted #1e366a 1px;/*ドット 色 太さ*/
+    padding: 0.5em 0.5em 0.5em 2em;
+    @apply list-decimal mb-8;
+}
+
+.table-of-content > ul li {
+    line-height: 1.5;
+    padding: 0.5em 0;
+}
+
+.table-of-content > ol li {
+    line-height: 1.5;
+    padding: 0.5em 0;
+}

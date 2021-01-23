@@ -17,6 +17,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const { previous, next } = data
   const date = post.frontmatter.date;
   const modifiedDate = post.frontmatter.modified_date;
+  const tableOfContents = data.markdownRemark.tableOfContents;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -33,6 +34,10 @@ const BlogPostTemplate = ({ data, location }) => {
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           {modifiedDate == null ? <p><FontAwesomeIcon icon={faClock}/> {date}</p> : <p><FontAwesomeIcon icon={faClock}/> {date} <FontAwesomeIcon icon={faSync}/> {modifiedDate}</p>}
         </header>
+        <div
+            className="table-of-content"
+            dangerouslySetInnerHTML={{ __html: tableOfContents }}
+        />
         <section
           className="markdown"
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -86,6 +91,11 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      tableOfContents(
+        absolute: false
+        pathToSlugField: "frontmatter.path"
+        maxDepth: 1
+      )
       frontmatter {
         title
         date(formatString: "YYYY-MM-DD")
