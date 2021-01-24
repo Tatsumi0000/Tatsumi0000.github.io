@@ -31,6 +31,8 @@ jobs:
         npm install
 
     - name: Build
+      env:
+        GOOGLE_ANALYTICS_CODE: ${{ secrets.GOOGLE_ANALYTICS_CODE }}
       run: |
         cd blog
         npm run build
