@@ -10,6 +10,3 @@ tags: ["bitrise", "Xcode", "テスト"]
 
 ## 高速化した方法
 そもそもCIの時間がかかっていた問題は、`xcode-test@2`というstepでした。ここだけで19分近くかかっていました。ここは、初期設定からなにもいじらずにそのままにしていました。モバイルチームの方にビルドログなどを調査していただいた結果、`xcode-test@2`を`Workflow Editor`で開いて、`Debug`セクションの、`Should run a build before testing?`の設定を`no`にしました。
-
-## 何をしているか
-明日書く。
